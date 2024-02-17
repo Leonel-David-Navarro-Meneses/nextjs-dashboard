@@ -57,7 +57,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
     `;
   } catch (error) {
       return {
-          message: 'Lo siento!, error al crear la factura. '
+          message: 'Database Error: Failed to Create Invoice.'
       };
   }
   revalidatePath('/dashboard/invoices');
